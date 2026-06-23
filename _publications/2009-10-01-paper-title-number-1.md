@@ -8,6 +8,6 @@ date: 2019-12-31
 venue: 'Journal 1'
 KCI: 'https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002542343'
 DBpia: 'https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE09288837'
-citation: "Kim, Kyeong-Jun, and Yun-Suk Lee. (2019). &quot;부모와 자녀의 가사노동 : 자녀의 성별과 연령에 따른 모방학습(modeling)의 차이 [Parents’ and Children’s Housework: Modeling by Children’s Gender and Age].&quot; <i>한국인구학 [Korea Journal of Population Studies]</i>. 42(4)."
+citation: "<br> Kim, Kyeong-Jun, and Yun-Suk Lee. (2019). &quot;부모와 자녀의 가사노동 : 자녀의 성별과 연령에 따른 모방학습(modeling)의 차이 [Parents’ and Children’s Housework: Modeling by Children’s Gender and Age].&quot; <i>한국인구학 [Korea Journal of Population Studies]</i>. 42(4)."
 ---
 The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
