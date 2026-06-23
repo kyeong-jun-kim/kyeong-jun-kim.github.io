@@ -1,13 +1,11 @@
 ---
-title: "Paper Title Number 4"
+title: "Social Networks and Stability and Change of Korean Adolescents’ Personal Value: A Longitudinal Study"
 collection: publications
-category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: 'This paper is about fixing template issue #693.'
-date: 2024-02-17
-venue: 'GitHub Journal of Bugs'
-paperurl: 'https://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
+category: manuscripts(english)
+permalink: /publication/2025-02-28-paper-title-number-3
+excerpt: ""
+date: 2025-02-28
+venue: 'Cross-Cultural Research'
+citation: "<br> Kim, Kyeong-Jun, and Yun-Suk Lee. (2025). &quot;Social Networks and Stability and Change of Korean Adolescents’ Personal Value: A Longitudinal Study.&quot; <i>Cross-Cultural Research</i>. 59(1): 121-143."
 ---
-
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+Adolescence is a period of life when an individual’s values become differentiated. Moreover, social networks undergo changes throughout the school years, making this a suitable research area for confirming the effect of network composition on the formation of human values. In this study, we examined the stability and change of values among Korean adolescents, while assessing the influence of one’s social network on the importance and change of values. Our findings reveal that the importance of conservation values among Korean teenagers increases during mid-late adolescence, and that the self-transcendence value is a settled disposition. We argue that these changes arise from a specific social structure and culture in South Korea, where children assume adult roles at an earlier age. In addition, the structural equation model revealed that social support enhances individuals’ prosocial and post-materialistic values. Consequently, this research significantly contributes to the academic discourse by confirming the stability and changes in personal values during adolescence, while also considering the impact of social factors.
