@@ -7,11 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-서울대학교 일반대학원 사회학과 박사과정(수료) 김경준입니다.
-주로 개인의 가치와 도덕 문화가 사회적 불관용, 복지 태도, 그리고 다양한 사회심리적 결과에 미치는 영향을 연구합니다. 특히 생애과정 관점과 양적방법론을 활용하여, 한국 사회의 변화하는 사회적 네트워크와 문화적 레퍼토리를 실증적으로 분석하는 데 주력하고 있습니다.
+서울대학교 일반대학원 사회학과 박사과정(수료)
+저는 도덕, 가치, 그리고 친사회적 행동을 연구하는 사회학자입니다. 제 연구는 문화와 인지, 사회심리학, 생애과정의 관점을 통합하며, 특히 인과추론에 중점을 둔 양적방법론을 주로 활용합니다.
 
-I am Kyeong-Jun Kim, a Ph.D. Candidate in the Department of Sociology at Seoul National University.
-My research primarily focuses on how personal values and moral cultures influence social intolerance, welfare attitudes, and various socio-psychological outcomes. Utilizing a life-course perspective and quantitative methods, I empirically analyze the shifting social networks and cultural repertoires within South Korean society.
+Ph.D. Candidate in the Department of Sociology at Seoul National University.
+I am a sociologist specializing in morality, values, and prosocial behavior. My research integrates perspectives from culture and cognition, social psychology, and the life course. I primarily employ quantitative methodologies, with a specific focus on causal inference.
 
 Research Interests / 관심 분야
 ======
