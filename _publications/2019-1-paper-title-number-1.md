@@ -1,7 +1,7 @@
 ---
 title: "부모와 자녀의 가사노동 : 자녀의 성별과 연령에 따른 모방학습(modeling)의 차이 <br> [Parents' and Children's Housework: Modeling by Children's Gender and Age]"
 collection: publications
-category: manuscripts
+category: manuscripts(korean)
 permalink: /publication/2019-12-31-paper-title-number-1
 excerpt: ""
 date: 2019-12-31
