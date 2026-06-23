@@ -35,15 +35,15 @@ author:
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=0rgVPasAAAAJ&hl=ko"
   inspire-hep      : # URL
   impactstory      : # URL
-  orcid            : "https://orcid.org/yourorcidurl"
-  semantic         : # URL
+  orcid            : "https://orcid.org/0000-0002-9476-2705"
+  semantic         : "https://www.semanticscholar.org/author/Kyeong-Jun-Kim/2109953487"
   ssrn             : # URL
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  researchgate     : # URL
-  scopus           : # URL
+  pubmed           : # URL
+  researchgate     : "https://www.researchgate.net/profile/Kyeong-Jun-Kim"
+  scopus           : "https://www.scopus.com/authid/detail.uri?authorId=58018319200"
   zotero           : # URL
 
 
