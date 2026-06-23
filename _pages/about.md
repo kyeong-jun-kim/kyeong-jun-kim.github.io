@@ -9,7 +9,7 @@ redirect_from:
 
 I am a sociologist specializing in morality, values, and prosocial behavior. My research integrates perspectives from culture and cognition, social psychology, and the life course. I primarily employ quantitative methodologies, with a specific focus on causal inference.
 
-저는 도덕, 가치, 그리고 친사회적 행동을 연구하는 사회학자입니다. 제 연구는 문화와 인지, 사회심리학, 생애과정의 관점을 통합하며, 특히 인과추론에 중점을 둔 양적방법론을 주로 활용합니다.
+저는 도덕, 가치, 그리고 친사회적 행동을 연구하는 사회학자입니다. 제 연구 분야는 문화와 인지, 사회심리학, 생애과정의 관점이며, 인과추론에 중점을 둔 양적방법론을 주로 활용합니다.
 
 <br><br> 
 
