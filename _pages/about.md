@@ -15,11 +15,11 @@ I am a sociologist specializing in morality, values, and prosocial behavior. My 
 
 Research Interests
 ======
-* **Culture and Cognition**
-* **Social Psychology**
-* **Morality**
-* **Life Course**
-* **Quantitative Methods**
+* Culture and Cognition
+* Social Psychology
+* Morality
+* Life Course
+* Quantitative Methods
 
 <br><br> 
 
