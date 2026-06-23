@@ -23,7 +23,7 @@ repository               : "kyeong-jun-kim/kyeong-jun-kim.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Kyeong-Jun Kim"
   pronouns         : # example: "she/her"  
   bio              : "Ph.D. Candidate in Sociology"
