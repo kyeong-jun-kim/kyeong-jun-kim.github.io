@@ -13,6 +13,8 @@ redirect_from:
 Ph.D. Candidate in the Department of Sociology at Seoul National University.
 I am a sociologist specializing in morality, values, and prosocial behavior. My research integrates perspectives from culture and cognition, social psychology, and the life course. I primarily employ quantitative methodologies, with a specific focus on causal inference.
 
+
+
 Research Interests / 관심 분야
 ======
 * **Culture and Cognition** (문화와 인지)
@@ -20,6 +22,8 @@ Research Interests / 관심 분야
 * **Morality** (도덕)
 * **Life Course** (생애 과정)
 * **Quantitative Methods** (양적방법론
+
+
 
 Education / 학력
 ======
