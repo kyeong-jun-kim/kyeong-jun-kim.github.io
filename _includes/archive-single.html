@@ -80,5 +80,30 @@
       <p><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
     {% endif %}
 
+    {% if post.citation %}
+      {% assign doi = post.doi | default: post.DOI %}
+      {% assign ssci = post.ssci | default: post.SSCI %}
+      {% assign kci = post.kci | default: post.KCI %}
+      {% assign scopus = post.scopus | default: post.SCOPUS %}
+      {% assign dbpia = post.dbpia | default: post.DBpia %}
+      {% assign kiss = post.kiss | default: post.KISS %}
+      
+      {% if doi or ssci or kci or scopus or dbpia or kiss %}
+        <p style="font-size: smaller">
+          {% if doi %}<a href="{{ doi }}" target="_blank">DOI</a>{% endif %}
+          {% if doi and ssci %} | {% endif %}
+          {% if ssci %}<a href="{{ ssci }}" target="_blank">SSCI</a>{% endif %}
+          {% if ssci and kci %} | {% endif %}
+          {% if kci %}<a href="{{ kci }}" target="_blank">KCI</a>{% endif %}
+          {% if kci and scopus %} | {% endif %}
+          {% if scopus %}<a href="{{ scopus }}" target="_blank">SCOPUS</a>{% endif %}
+          {% if scopus and dbpia %} | {% endif %}
+          {% if dbpia %}<a href="{{ dbpia }}" target="_blank">DBpia</a>{% endif %}
+          {% if dbpia and kiss %} | {% endif %}
+          {% if kiss %}<a href="{{ kiss }}" target="_blank">KISS</a>{% endif %}
+        </p>
+      {% endif %}
+    {% endif %}
+
   </article>
 </div>
