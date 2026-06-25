@@ -38,7 +38,25 @@
       </div>
     {% endif %}
 
-    <h2 class="archive__item-title" itemprop="headline">
+{% if post.indexing %}
+      <div style="margin-top: 40px; margin-bottom: 5px;">
+      {% for index in post.indexing %}
+        
+        {% assign bg_color = "#6c757d" %}
+        
+        {% if index == "SSCI" %}
+          {% assign bg_color = "#dc3545" %}
+        {% elsif index == "SCOPUS" %}
+          {% assign bg_color = "#fd7e14" %}
+        {% elsif index == "Excellent KCI" or index == "KCI" %}
+          {% assign bg_color = "#007bff" %}
+        {% endif %}
+
+        <span style="display:inline-block; padding: 2px 8px; font-size: 0.75em; font-weight: bold; color: white; background-color: {{ bg_color }}; border-radius: 4px; margin-right: 5px;">{{ index }}</span>
+      {% endfor %}
+      </div>
+    {% endif %}
+    <h2 class="archive__item-title" itemprop="headline" style="margin-top: 0;">
       {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
