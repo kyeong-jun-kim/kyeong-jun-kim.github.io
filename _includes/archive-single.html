@@ -121,8 +121,9 @@
       {% assign scopus = post.scopus | default: post.SCOPUS %}
       {% assign dbpia = post.dbpia | default: post.DBpia %}
       {% assign kiss = post.kiss | default: post.KISS %}
+      {% assign Scholar = post.Scholar | default: post.Scholar %}
       
-      {% if doi or ssci or kci or scopus or dbpia or kiss %}
+      {% if doi or ssci or kci or scopus or dbpia or kiss or Scholar %}
         <p style="font-size: smaller">
           {% if doi %}<a href="{{ doi }}" target="_blank">DOI</a>{% endif %}
           {% if doi and ssci %} | {% endif %}
@@ -135,6 +136,9 @@
           {% if dbpia %}<a href="{{ dbpia }}" target="_blank">DBpia</a>{% endif %}
           {% if dbpia and kiss %} | {% endif %}
           {% if kiss %}<a href="{{ kiss }}" target="_blank">KISS</a>{% endif %}
+          {% if kiss and Scholar %} | {% endif %}
+          {% if Scholar %}<a href="{{ Scholar }}" target="_blank">Scholar</a>{% endif %}
+
         </p>
       {% endif %}
     {% endif %}
