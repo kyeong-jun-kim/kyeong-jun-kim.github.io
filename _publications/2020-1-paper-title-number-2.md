@@ -6,6 +6,7 @@ permalink: /publication/2020-08-31-paper-title-number-2
 excerpt: ""
 date: 2020-08-31
 venue: '조사연구 [Survey Research]'
+DOI: 'http://doi.org/10.20997/sr.21.3.6'
 KCI: 'https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002617721'
 KISS: 'https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE09288837'
 citation: "<br> Kim, Kyeong-Jun, and Yun-Suk Lee. (2020). &quot;부모와 함께하는 가사노동과 함께하지 않는 가사노동: 자녀의 성별과 가구 유형에 따른 차이 [Household Tasks that Children Do with or without Parents].&quot; <i>조사연구 [Survey Research]</i>. 21(3): 141-167."
