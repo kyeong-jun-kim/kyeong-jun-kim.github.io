@@ -81,6 +81,22 @@ layout: default
           <p style="font-size: smaller"><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
         {% endif %}
 
+        {% if page.citation %}
+          <p style="font-size: smaller">
+            {% if page.doi %}<a href="{{ page.doi }}" target="_blank">DOI</a>{% endif %}
+            {% if page.doi and page.ssci %} | {% endif %}
+            {% if page.ssci %}<a href="{{ page.ssci }}" target="_blank">SSCI</a>{% endif %}
+            {% if page.ssci and page.kci %} | {% endif %}
+            {% if page.kci %}<a href="{{ page.kci }}" target="_blank">KCI</a>{% endif %}
+            {% if page.kci and page.scopus %} | {% endif %}
+            {% if page.scopus %}<a href="{{ page.scopus }}" target="_blank">SCOPUS</a>{% endif %}
+            {% if page.scopus and page.dbpia %} | {% endif %}
+            {% if page.dbpia %}<a href="{{ page.dbpia }}" target="_blank">DBpia</a>{% endif %}
+            {% if page.dbpia and page.kiss %} | {% endif %}
+            {% if page.kiss %}<a href="{{ page.kiss }}" target="_blank">KISS</a>{% endif %}
+          </p>
+        {% endif %}
+
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
