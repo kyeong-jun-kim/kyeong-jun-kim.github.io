@@ -14,13 +14,18 @@ author_profile: true
 <!-- New style rendering if publication categories are defined -->
 {% if site.publication_category %}
   {% for category in site.publication_category %}
-    {% assign category_key = category[0] | strip %}
+    {% assign category_key = category[0] | strip | downcase %}
     {% assign title_shown = false %}
     {% for post in site.publications reversed %}
-      {% assign post_category = post.category | default: "" | strip %}
+      {% assign post_category = post.category | default: post.header.category | default: "" %}
       {% if post_category == "" and post.categories %}
-        {% assign post_category = post.categories | join: "," | strip %}
+        {% if post.categories.size > 1 %}
+          {% assign post_category = post.categories | join: "," %}
+        {% else %}
+          {% assign post_category = post.categories[0] %}
+        {% endif %}
       {% endif %}
+      {% assign post_category = post_category | strip | downcase %}
       {% if post_category != category_key %}
         {% continue %}
       {% endif %}
