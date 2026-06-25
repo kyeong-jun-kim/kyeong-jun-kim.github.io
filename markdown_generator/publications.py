@@ -8,9 +8,9 @@
 # The file needs to have the following columns as a header at the top:
 # pub_date, title, venue, excerpt, citation, url_slug, paper_url, slides_url
 # - `excerpt`, `paper_url`, and slides_url can be blank, but the others must have values. 
-# - `pub_date` must be formatted as YYYY-MM-DD.
+# - `pub_date` must be formatted as YYYY-MM.
 # - `url_slug` will be the descriptive part of the .md file and the permalink URL for the page about the paper. 
-#    The .md file will be `YYYY-MM-DD-[url_slug].md` and the permalink will be `https://[yourdomain]/publications/YYYY-MM-DD-[url_slug]`
+#    The .md file will be `YYYY-MM-[url_slug].md` and the permalink will be `https://[yourdomain]/publications/YYYY-MM-[url_slug]`
 import csv
 import os
 import sys
