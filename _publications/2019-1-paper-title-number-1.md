@@ -6,6 +6,7 @@ permalink: /publication/2019-12-31-paper-title-number-1
 excerpt: ""
 date: 2019-12-31
 venue: '한국인구학 [Korea Journal of Population Studies]'
+DOI: 'https://doi.org/10.31693/kjps.2019.12.42.4.1'
 KCI: 'https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002542343'
 DBpia: 'https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE09288837'
 citation: "<br> Kim, Kyeong-Jun, and Yun-Suk Lee. (2019). &quot;부모와 자녀의 가사노동 : 자녀의 성별과 연령에 따른 모방학습(modeling)의 차이 [Parents’ and Children’s Housework: Modeling by Children’s Gender and Age].&quot; <i>한국인구학 [Korea Journal of Population Studies]</i>. 42(4): 1-25."
