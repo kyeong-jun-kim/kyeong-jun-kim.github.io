@@ -109,8 +109,9 @@ layout: default
           {% assign scopus = page.scopus | default: page.SCOPUS %}
           {% assign dbpia = page.dbpia | default: page.DBpia %}
           {% assign kiss = page.kiss | default: page.KISS %}
+          {% assign scholar = page.scholar | default: page.SCHOLAR %}
           
-          {% if doi or ssci or kci or scopus or dbpia or kiss %}
+          {% if doi or ssci or kci or scopus or dbpia or kiss or scholar %}
             <p style="font-size: smaller">
               {% if doi %}<a href="{{ doi }}" target="_blank">DOI</a>{% endif %}
               {% if doi and ssci %} | {% endif %}
@@ -123,6 +124,8 @@ layout: default
               {% if dbpia %}<a href="{{ dbpia }}" target="_blank">DBpia</a>{% endif %}
               {% if dbpia and kiss %} | {% endif %}
               {% if kiss %}<a href="{{ kiss }}" target="_blank">KISS</a>{% endif %}
+              {% if (doi or ssci or kci or scopus or dbpia or kiss) and scholar %} | {% endif %}
+              {% if scholar %}<a href="{{ scholar }}" target="_blank">Scholar</a>{% endif %}
             </p>
           {% endif %}
         {% endif %}
