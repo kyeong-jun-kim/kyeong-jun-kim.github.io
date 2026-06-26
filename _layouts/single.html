@@ -69,7 +69,7 @@ layout: default
         {{ content }}
 
         {% assign has_citation = page.citation %}
-        {% assign has_links = page.paperurl or page.slidesurl or page.bibtexurl %}
+        {% assign has_links = page.paperurl | default: page.slidesurl | default: page.bibtexurl %}
 
         {% if has_citation %}
           <div class="publication-citation">
