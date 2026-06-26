@@ -12,10 +12,10 @@ main:
     url: /publications/
 
   - title: "Grant and Award"
-    url: /talks/    
+    url: /grant&award/    
 
   - title: "Others"
-    url: /teaching/    
+    url: /others/    
     
   - title: "CV"
     url: /cv/
