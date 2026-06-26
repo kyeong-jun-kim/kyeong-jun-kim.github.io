@@ -47,12 +47,23 @@ a:hover {
 }
 
 .link-list {
+  font-size: smaller;
+  
   a {
+    display: inline-block; // 중요한 포인트! 링크 스타일의 간섭을 줄입니다.
+    text-decoration: none !important; // 기존 테마 유지
+    
+    // 첫 번째 링크가 아닌 경우에만 왼쪽에 | 삽입
     &:not(:first-child)::before {
-      content: "|" !important;
-      margin: 0 8px !important;
-      color: #000000 !important;
-      text-decoration: none !important;
+      content: "|";
+      margin: 0 8px;
+      color: #000000;
+      cursor: default; // 구분선은 클릭 안 되게
+      text-decoration: none !important; // 강제로 꾸밈 방지
+    }
+    
+    &:hover {
+      text-decoration: underline !important;
     }
   }
 }
