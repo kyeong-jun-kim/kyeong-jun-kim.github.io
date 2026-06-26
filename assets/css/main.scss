@@ -48,15 +48,11 @@ a:hover {
 
 .link-list {
   a {
-    // 첫 번째 링크가 아닌 경우에만 앞에 | 추가
     &:not(:first-child)::before {
-      content: "|";
-      margin: 0 8px;
-      color: #000000;
-      text-decoration: none;
+      content: "|" !important;
+      margin: 0 8px !important;
+      color: #000000 !important;
+      text-decoration: none !important;
     }
-    
-    // 링크 자체의 텍스트 스타일이 다른 요소의 영향을 받지 않게 초기화
-    text-decoration: none;
   }
 }
