@@ -17,8 +17,10 @@ Research Interests
 ======
 * Culture and Cognition
 * Social Psychology
-* Morality
+* Values and Morality
+* Prosocial Behavior
 * Life Course
+* Causal Inference
 * Quantitative Methods
   
 <br>
