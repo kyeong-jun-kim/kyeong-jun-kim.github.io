@@ -62,18 +62,19 @@
   .publication-citation {
     margin-top: 1.5em;
     font-size: $type-size-6;
-    color: var(--global-text-color);
+    color: #000;
 
     strong {
       display: block;
       margin-bottom: 0.35em;
-      color: var(--global-text-color);
+      color: #000;
       font-weight: bold;
     }
 
     span {
       display: block;
       line-height: 1.6;
+      color: #000;
     }
   }
 
