@@ -39,3 +39,5 @@ author_profile: true
 {% else %}
   {% for post in site.publications reversed %}
     {% include archive-single.html hide_citation=true %}
+  {% endfor %}
+{% endif %}
