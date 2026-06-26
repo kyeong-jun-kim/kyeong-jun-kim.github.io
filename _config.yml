@@ -231,7 +231,7 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-  grant&award:
+  grants&awards:
     output: true
     permalink: /:collection/:path/
 
@@ -283,12 +283,12 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # _grant&award
+  # _grants&awards
   - scope:
       path: ""
-      type: grant&award
+      type: grants&awards
     values:
-      layout: grant&award
+      layout: grants&awards
       author_profile: true
       share: true
 
