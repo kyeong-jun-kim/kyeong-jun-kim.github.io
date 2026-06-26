@@ -45,3 +45,10 @@ a {
 a:hover {
   text-decoration: underline !important;
 }
+
+.link-list a:not(:first-child)::before {
+  content: "|";
+  margin: 0 8px;   /* | 기호의 좌우 간격 */
+  color: #000000;  /* 검정색 */
+  text-decoration: none;
+}
