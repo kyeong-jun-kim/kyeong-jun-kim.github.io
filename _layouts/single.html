@@ -96,7 +96,7 @@ layout: default
           {% assign scholar = page.scholar | default: page.SCHOLAR %}
           
           {% if doi or ssci or kci or scopus or dbpia or kiss or scholar %}
-            <p style="font-size: smaller">
+            <p class="link-list" style="font-size: smaller">
               {% if doi %}<a href="{{ doi }}" target="_blank">DOI</a>{% endif %}
               {% if ssci %} <a href="{{ ssci }}" target="_blank">SSCI</a>{% endif %}
               {% if kci %} <a href="{{ kci }}" target="_blank">KCI</a>{% endif %}
