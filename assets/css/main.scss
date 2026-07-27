@@ -67,21 +67,25 @@ a:hover {
     }
   }
 }
-/* 다크모드 활성화 시 텍스트 및 기호 색상 강제 전환 */
-html[data-theme="dark"], 
-body.dark-mode, 
-body.dark-theme, 
+/* 다크모드 활성화 시 텍스트 및 기호 색상 강제 전환 (진짜 최종 버전) */
+html[data-theme="dark"],
+body.dark-mode,
+body.dark-theme,
 .dark {
-  
-  /* 1. 범위를 '.page__content'에서 페이지 전체('.page') 및 목록 영역으로 확대 */
+
+  /* 1. 본문, 인용구, 링크, 그리고 '굵은 글씨(strong)'까지 모두 포함 */
   .page p,
   .page div,
   .page span,
   .page small,
   .page cite,
+  .page a,
+  .page strong,  /* <--- 굵은 글씨(Recommended citation:) 복구 */
+  .page b,
   .archive__item p,
   .archive__item div,
-  .archive__item span {
+  .archive__item span,
+  .archive__item strong {
     color: #e2e8f0 !important;
   }
 
