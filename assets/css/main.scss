@@ -46,20 +46,22 @@ a:hover {
   text-decoration: underline !important;
 }
 
-.link-list {
+/* 목록 페이지와 단일 페이지 모두에 구분선(|) 스타일 적용 */
+.link-list,
+.publication-citation + p {
   font-size: smaller;
   
   a {
-    display: inline-block; // 중요한 포인트! 링크 스타일의 간섭을 줄입니다.
-    text-decoration: none !important; // 기존 테마 유지
+    display: inline-block;
+    text-decoration: none !important;
     
-    // 첫 번째 링크가 아닌 경우에만 왼쪽에 | 삽입
+    /* 첫 번째 링크가 아닌 경우에만 왼쪽에 | 삽입 */
     &:not(:first-child)::before {
       content: "|";
       margin: 0 8px;
       color: #000000;
-      cursor: default; // 구분선은 클릭 안 되게
-      text-decoration: none !important; // 강제로 꾸밈 방지
+      cursor: default;
+      text-decoration: none !important;
     }
     
     &:hover {
@@ -67,6 +69,7 @@ a:hover {
     }
   }
 }
+
 /* 다크모드 활성화 시 텍스트 및 기호 색상 강제 전환 (완벽 맞춤형 버전) */
 html[data-theme="dark"], 
 body.dark-mode, 
@@ -88,8 +91,9 @@ body.dark-theme,
     color: #e2e8f0 !important;
   }
 
-  /* 3. 구분선(|) 색상도 다크모드에서 잘 보이게 밝게 변경 */
-  .link-list a:not(:first-child)::before {
+/* 3. 구분선(|) 색상도 다크모드에서 잘 보이게 밝게 변경 (두 영역 모두 포함) */
+  .link-list a:not(:first-child)::before,
+  .publication-citation + p a:not(:first-child)::before {
     color: #e2e8f0 !important;
   }
 }
