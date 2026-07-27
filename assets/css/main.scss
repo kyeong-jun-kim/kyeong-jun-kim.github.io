@@ -73,10 +73,16 @@ body.dark-mode,
 body.dark-theme, 
 .dark {
   
-  /* 1. 하단 본문(Recommended citation 등) 글자색 밝게 */
+  /* 1. 하단 본문(Recommended citation 등) 글자색 밝게 (선택자 대폭 확장) */
+  .page__content,
   .page__content p,
+  .page__content div,
+  .page__content span,
   .page__content strong,
+  .page__footer,
   .page__footer p,
+  .page__footer div,
+  .page__footer span,
   .page__footer strong {
     color: #e2e8f0 !important; 
   }
