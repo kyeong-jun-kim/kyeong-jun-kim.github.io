@@ -67,27 +67,28 @@ a:hover {
     }
   }
 }
-/* 다크모드 활성화 시 텍스트 및 기호 색상 강제 전환 */
+/* 다크모드 활성화 시 텍스트 및 기호 색상 강제 전환 (초강력 버전) */
 html[data-theme="dark"], 
 body.dark-mode, 
 body.dark-theme, 
 .dark {
   
-  /* 1. 하단 본문(Recommended citation 등) 글자색 밝게 (선택자 대폭 확장) */
+  /* 1. 하위의 모든 텍스트 요소(링크 제외)에 밝은 색상 강제 적용 */
   .page__content,
-  .page__content p,
-  .page__content div,
-  .page__content span,
-  .page__content strong,
+  .page__content *:not(a),
   .page__footer,
-  .page__footer p,
-  .page__footer div,
-  .page__footer span,
-  .page__footer strong {
+  .page__footer *:not(a),
+  .archive__item-excerpt,
+  .archive__item-excerpt *:not(a) {
     color: #e2e8f0 !important; 
   }
 
-  /* 2. 구분선(|) 색상도 다크모드에서 잘 보이게 밝게 변경 */
+  /* 2. 인용구에 자주 쓰이는 특수 태그 명시적 색상 변경 */
+  small, cite, blockquote {
+    color: #e2e8f0 !important;
+  }
+
+  /* 3. 구분선(|) 색상도 다크모드에서 잘 보이게 밝게 변경 */
   .link-list a:not(:first-child)::before {
     color: #e2e8f0 !important;
   }
