@@ -67,32 +67,33 @@ a:hover {
     }
   }
 }
-/* 다크모드 활성화 시 텍스트 및 기호 색상 강제 전환 (최종 통합본) */
+/* 다크모드 활성화 시 텍스트 및 기호 색상 강제 전환 (완벽한 결합 버전) */
 html[data-theme="dark"], 
 body.dark-mode, 
 body.dark-theme, 
 .dark {
   
-  /* 1. 텍스트 컨테이너, 문단, 굵은 글씨(strong, b), 혹시 모를 제목 태그까지 모두 포함 */
-  .page__content,
-  .page__content p,
+  /* 1. 볼드체(Recommended citation:)를 하얗게 만들었던 확실한 코드 */
   .page__content strong,
   .page__content b,
-  .page__content h4,
-  .page__content h5,
-  .page__content h6,
-  .page__footer,
-  .page__footer p,
   .page__footer strong,
   .page__footer b,
-  .archive__item,
-  .archive__item p,
-  .archive__item strong,
-  .archive__item b {
+  
+  /* 2. citation 텍스트(Kim ~) 및 링크(DOI)를 하얗게 만들었던 코드 */
+  .page p,
+  .page div,
+  .page span,
+  .page cite,
+  .page a,
+  
+  /* 3. 텍스트가 껍데기(태그) 없이 덩그러니 있을 경우를 대비한 뼈대 */
+  .page__content,
+  .page__footer,
+  .page {
     color: #e2e8f0 !important; 
   }
 
-  /* 2. 구분선(|) 색상도 다크모드에서 잘 보이게 밝게 변경 */
+  /* 4. 구분선(|) 색상도 다크모드에서 잘 보이게 밝게 변경 */
   .link-list a:not(:first-child)::before {
     color: #e2e8f0 !important;
   }
