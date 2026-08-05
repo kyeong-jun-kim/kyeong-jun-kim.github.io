@@ -4,141 +4,61 @@ layout: default
 
 {% include base_path %}
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% endif %}
-
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
+{% assign page_date_string = page.date | default: "" %}
+{% if page_date_string contains "-" %}
+  {% assign page_date_parts = page_date_string | split: "-" %}
+  {% if page_date_parts.size == 2 %}
+    {% assign page_date_for_datetime = page_date_string | append: "-01" %}
+  {% else %}
+    {% assign page_date_for_datetime = page.date | date: "%Y-%m-%d" %}
+  {% endif %}
+{% else %}
+  {% assign page_date_for_datetime = page.date | date: "%Y-%m-%d" %}
 {% endif %}
 
 <div id="main" role="main">
   {% include sidebar.html %}
 
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    {% assign page_date_string = page.date | default: "" %}
-    {% if page_date_string contains "-" %}
-      {% assign page_date_parts = page_date_string | split: "-" %}
-      {% if page_date_parts.size == 2 %}
-        {% assign page_date_for_datetime = page_date_string | append: "-01" %}
-      {% else %}
-        {% assign page_date_for_datetime = page.date | date: "%Y-%m-%d" %}
-      {% endif %}
-    {% else %}
-      {% assign page_date_for_datetime = page.date | date: "%Y-%m-%d" %}
-    {% endif %}
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.date %}
-      {% if page_date_parts.size == 2 %}
-        <meta itemprop="datePublished" content="{{ page_date_for_datetime | date_to_xmlschema }}">
-      {% else %}
-        <meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">
-      {% endif %}
-    {% endif %}
-    {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page_date_for_datetime | date_to_xmlschema }}">{% endif %}
 
     <div class="page__inner-wrap">
-      {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
-          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
-          {% if page.read_time %}
-            <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
-          {% endif %}
-        {% if page.modified %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
-        {% endif %}
-        
-        {% if page.collection == 'teaching' %}
-          <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif page.venue and page.date %}
-          <p>Published in <i>{{ page.venue }}</i>, {{ page_date_for_datetime | date: "%Y" }} </p>
+      <header>
+        {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+
+        {% if page.venue and page.date %}
+          <p>Published in <i>{{ page.venue }}</i>, {{ page_date_for_datetime | date: "%Y" }}</p>
         {% elsif page.date %}
-          {% if page_date_parts.size == 2 %}
-            <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page_date_for_datetime | date_to_xmlschema }}">{{ page_date_for_datetime | date: "%B %Y" }}</time></p>
-          {% else %}
-            <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
-          {% endif %}
-        {% endif %}    
-        </header>
-      {% endunless %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Published:</strong> <time datetime="{{ page_date_for_datetime | date_to_xmlschema }}">{% if page_date_parts.size == 2 %}{{ page_date_for_datetime | date: "%B %Y" }}{% else %}{{ page.date | date: "%B %d, %Y" }}{% endif %}</time></p>
+        {% endif %}
+      </header>
 
       <section class="page__content" itemprop="text">
         {{ content }}
 
-        {% assign has_citation = page.citation %}
-        {% assign has_links = page.paperurl | default: page.slidesurl | default: page.bibtexurl %}
-
-        {% if has_citation %}
+        {% if page.citation %}
           <div class="publication-citation">
             <strong>Recommended citation:</strong>
             <span>{{ page.citation | remove: '<br>' | remove: '<br />' | remove: '<br/>' }}</span>
           </div>
         {% endif %}
 
-        {% if has_links %}
-          <div class="publication-links">
-            {% if page.paperurl %}<a href="{{ page.paperurl }}">Download Paper</a>{% endif %}
-            {% if page.slidesurl %}<a href="{{ page.slidesurl }}">Download Slides</a>{% endif %}
-            {% if page.bibtexurl %}<a href="{{ page.bibtexurl }}">Download Bibtex</a>{% endif %}
+        {% if page.doi or page.kci or page.dbpia or page.kiss or page.scholar %}
+          <div class="link-list">
+            {% if page.doi %}<a href="{{ page.doi }}" target="_blank" rel="noopener">DOI</a>{% endif %}
+            {% if page.kci %}<a href="{{ page.kci }}" target="_blank" rel="noopener">KCI</a>{% endif %}
+            {% if page.dbpia %}<a href="{{ page.dbpia }}" target="_blank" rel="noopener">DBpia</a>{% endif %}
+            {% if page.kiss %}<a href="{{ page.kiss }}" target="_blank" rel="noopener">KISS</a>{% endif %}
+            {% if page.scholar %}<a href="{{ page.scholar }}" target="_blank" rel="noopener">Scholar</a>{% endif %}
           </div>
         {% endif %}
 
-        {% if page.citation %}
-          {% assign doi = page.doi | default: page.DOI %}
-          {% assign ssci = page.ssci | default: page.SSCI %}
-          {% assign kci = page.kci | default: page.KCI %}
-          {% assign scopus = page.scopus | default: page.SCOPUS %}
-          {% assign dbpia = page.dbpia | default: page.DBpia %}
-          {% assign kiss = page.kiss | default: page.KISS %}
-          {% assign scholar = page.scholar | default: page.SCHOLAR %}
-          
-          {% if doi or ssci or kci or scopus or dbpia or kiss or scholar %}
-            <p style="font-size: smaller">
-              {% if doi %}<a href="{{ doi }}" target="_blank">DOI</a>{% endif %}
-              {% if ssci %} <a href="{{ ssci }}" target="_blank">SSCI</a>{% endif %}
-              {% if kci %} <a href="{{ kci }}" target="_blank">KCI</a>{% endif %}
-              {% if scopus %} <a href="{{ scopus }}" target="_blank">SCOPUS</a>{% endif %}
-              {% if dbpia %} <a href="{{ dbpia }}" target="_blank">DBpia</a>{% endif %}
-              {% if kiss %} <a href="{{ kiss }}" target="_blank">KISS</a>{% endif %}
-              {% if scholar %} <a href="{{ scholar }}" target="_blank">Scholar</a>{% endif %}
-            </p>
-          {% endif %}
-        {% endif %}
-
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
-      <footer class="page__meta">
-        {% if site.data.ui-text[site.locale].meta_label %}
-          <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
-        {% endif %}
-        {% include page__taxonomy.html %}
-      </footer>
-
       {% if page.share %}{% include social-share.html %}{% endif %}
-
       {% include post_pagination.html %}
     </div>
-
-    {% if site.comments.provider and page.comments %}
-      {% include comments.html %}
-    {% endif %}
   </article>
-
-  {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
-  {% if page.id and page.related and site.related_posts.size > 0 %}
-    <div class="page__related">
-      {% if site.data.ui-text[site.locale].related_label %}
-        <h4 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "You May Also Enjoy" }}</h4>
-      {% endif %}
-      <div class="grid__wrapper">
-        {% for post in site.related_posts limit:4 %}
-          {% include archive-single.html type="grid" %}
-        {% endfor %}
-      </div>
-    </div>
-  {% endif %}
 </div>

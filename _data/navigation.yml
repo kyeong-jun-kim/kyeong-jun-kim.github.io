@@ -12,13 +12,10 @@ main:
     url: /publications/
 
   - title: "Grants and Awards"
-    url: /grants&awards/    
+    url: /grants&awards/
 
   - title: "Others"
-    url: /others/    
-    
+    url: /others/
+
   - title: "CV"
     url: /cv/
-    
-  # - title: "CV"
-  #   url: /cv-json/

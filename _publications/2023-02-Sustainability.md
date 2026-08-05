@@ -6,7 +6,7 @@ permalink: /publication/2023-02-Sustainability/
 excerpt: ""
 date: 2023-02-07
 indexing: ["SSCI", "SCOPUS"]
-DOI: 'https://doi.org/10.3390/su15043098'
+doi: 'https://doi.org/10.3390/su15043098'
 venue: 'Sustainability'
 citation: "<br> Oh, Ingyu, Kyeong-Jun Kim, and Chris Rowley. (2023). &quot;Female Empowerment and Radical Empathy for the Sustainability of Creative Industries: The Case of K-Pop.&quot; <i>Sustainability</i> 15(4): 3098."
 ---

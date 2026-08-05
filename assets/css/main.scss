@@ -12,8 +12,8 @@
     "vendor/breakpoint/breakpoint",
 
     "themes",
-    "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+    "theme/default_light",
+    "theme/default_dark",
 
     "include/mixins",
     "vendor/susy/susy",
@@ -22,20 +22,14 @@
     "layout/base",
 
     "include/utilities",
-    "layout/tables",
     "layout/buttons",
-    "layout/notices",
     "layout/masthead",
     "layout/navigation",
     "layout/footer",
-    "syntax",
-
-    "layout/forms",
 
     "layout/page",
     "layout/archive",
-    "layout/sidebar",
-    "layout/json_cv"
+    "layout/sidebar"
 ;
 
 a {
@@ -50,16 +44,15 @@ a:hover {
   font-size: smaller;
   
   a {
-    display: inline-block; // 중요한 포인트! 링크 스타일의 간섭을 줄입니다.
-    text-decoration: none !important; // 기존 테마 유지
+    display: inline-block;
+    text-decoration: none !important;
     
-    // 첫 번째 링크가 아닌 경우에만 왼쪽에 | 삽입
     &:not(:first-child)::before {
       content: "|";
       margin: 0 8px;
-      color: #000000;
-      cursor: default; // 구분선은 클릭 안 되게
-      text-decoration: none !important; // 강제로 꾸밈 방지
+      color: var(--global-text-color-light);
+      cursor: default;
+      text-decoration: none !important;
     }
     
     &:hover {
